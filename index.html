@@ -1,16 +1,113 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
+<link rel="shortcut icon" href="http://lifediscoverycoaching.com/wp-content/uploads/2016/08/Favicon.png"/>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
+  <title>Plant Database</title>
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1671.1">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+<link rel="stylesheet" href="styles.css"/>
+<script
+ src="http://code.jquery.com/jquery-3.3.1.js"
+ integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+ crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script>
+<script type="text/template" id="plantlisttemplate">
+<div class="wrapper">
+    {{#plants}}
+      <div class="cell">
+          <h2>{{name}}</h2>
+            <img src="{{img_src}}" class="cell-img">
+              <ul>
+                {{#watering_instructions}}
+                  <li>{{.}}</li>
+                {{/watering_instructions}}
+              </ul>
+      </div>
+    {{/plants}}
+</div>
+
+</script>
+
+<script type="text/javascript" src="index.js" ></script>
 </head>
 <body>
-<p class="p1">test</p>
+
+
+
+<h1>Plant Database</h1>
+
+
+<div id="plantlist">
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="cell">
+  	<h2>Snake Plant</h2>
+  	<img src="https://images.homedepot-static.com/productImages/4a05359d-8a60-4ff1-838f-560926305e3d/svn/house-plants-22693-64_400_compressed.jpg" class="cell-img">
+  	<ul>
+      <li>When to water: 2 weeks</li>
+  		<li>Light: Indirect</li>
+  	</ul>		
+
+  </div>
+
+
+<div class="cell">
+  <h2>Marbled Pothos</h2>
+  <img src="https://i.pinimg.com/originals/2e/a9/39/2ea939fe9dae4e874b4fa1196144bba4.jpg" class="cell-img">
+   <ul>
+      <li>When to water: Weekly</li>
+      <li>Light: Indirect</li>
+    </ul> 
+</div>
+
+
+
+<div class="cell">
+  <h2>Bird of Paradise</h2>
+  <img src="https://i2.wp.com/greenfreshflorals.com/wp-content/uploads/2018/05/BIRD12_WHT_G_7478.jpg?fit=1000%2C1000&ssl=1" class="cell-img">
+    <ul>
+      <li>When to water: Weekly</li>
+      <li>Light: Direct</li>
+    </ul> 
+
+</div>
+
+<div class="cell">
+  <h2>Hoya Heart</h2>
+  <img src="https://www.plantsguru.com//image/cache/catalog/cacti%20and%20succulents/pg-hoya-kerrii-green-800x800.jpg" class="cell-img">
+    <ul>
+      <li>When to water: 2-3 weeks</li>
+      <li>Light: Bright, direct</li>
+    </ul> 
+</div>
+
+<div class="cell">
+  <h2>ZZ Plant</h2>
+  <img src="https://images.homedepot-static.com/productImages/88391cd7-8d55-4f06-9bc3-cfbc825328f9/svn/house-plants-26059-64_1000.jpg" class="cell-img">
+    <ul>
+      <li>When to water: 2 weeks</li>
+      <li>Light: Indirect</li>
+    </ul> 
+</div>
+
+
+<div class="cell">
+  <h2>Asparagus Fern</h2>
+  <img src="https://cdn.shopify.com/s/files/1/1706/1307/products/Asparagus-setaceus-60cm_400x.jpg?v=1549206464" class="cell-img">
+      <ul>
+      <li>When to water: Weekly, likes to be misted</li>
+      <li>Light: Bright, indirect</li>
+    </ul> 
+</div>
+
+
+</div>
+
+
 </body>
 </html>
